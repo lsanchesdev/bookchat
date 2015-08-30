@@ -1,0 +1,9 @@
+{
+    "name"    : "bookchat",
+    "icon": "./app/images/icon.ico",
+    "version" : "0.1.0",
+    "main"    : "main.js",
+    "description" : "Unofficial facebook chat",
+    "author" : "Matheus Faustino (@zexias)",
+    "license" : "MIT"
+}

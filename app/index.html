@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/style.css" media="all" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="loader">
+      <div>
+        loading...
+      </div>
+    </div>
+
+    <div class="offline">You not should have internet access right now, crazy isn't?</div>
+
+    <webview
+            id="facebook"
+            src="https://www.messenger.com/login"
+            autosize="on"
+            plugins>
+    </webview>
+
+    <script type="application/javascript">
+      // adds jquery shortcut
+      window.$ = window.jQuery = require('./js/jquery.js');
+
+      var starting = true;
+
+      onload = function() {
+        var webview = document.getElementById('facebook');
+        var loader = $('.loader');
+
+        var loadstart = function () {
+          if (starting) {
+            loader.fadeIn();
+          }
+        };
+
+        var loadstop = function () {
+          if (starting) {
+            loader.fadeOut();
+            starting = false;
+          }
+        };
+
+        webview.addEventListener('did-start-loading', loadstart);
+        webview.addEventListener('did-stop-loading', loadstop);
+
+        webview.addEventListener('new-window', function (e) {
+          global.require('shell').openExternal(e.url);
+        });
+      }; // end onload
+
+      /*
+        Offline message
+       */
+      var updateOnline = function() {
+        if (navigator.onLine) {
+          console.log('online');
+          $('.offline').fadeOut();
+        } else {
+          console.log('offline');
+          $('.offline').fadeIn();
+        }
+      }
+
+      window.addEventListener('online', updateOnline);
+      window.addEventListener('offline', updateOnline);
+      updateOnline();
+
+      /*
+        Improves usability
+       */
+      window.addEventListener('focus',function () {
+        $('#facebook').focus();
+      });
+    </script>
+  </body>
+</html>
