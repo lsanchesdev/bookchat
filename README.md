@@ -6,7 +6,7 @@ Unofficial facebook chat, built using webview and [Electron](https://github.com/
 
 ## Installation
 
-You can download BookChat from [release]() page. It's cross-platform(Linux, MacOS, Windows).
+You can download BookChat from [release](https://github.com/matheusfaustino/bookchat/releases) page. It's cross-platform(Linux, MacOS, Windows).
 
 ### Why?
 
