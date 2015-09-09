@@ -4,25 +4,25 @@ Unofficial facebook chat, built using webview and [Electron](https://github.com/
 
 ![screenshot](app-desktop.jpg)
 
-## Installation
+## Installation and Usage
 
 You can download BookChat from [release](https://github.com/matheusfaustino/bookchat/releases) page. It's cross-platform(Linux, MacOS, Windows).
+Click in app icon and be happy.
 
-### Why?
+## Why use it?
 
-Because I don't like to use webapps in my browser.
-So, if you think like me and would like to chat with your friends, this is your chance!
+If you are like me and don't like to use webapps(like that) in your browser, you should try this app.
 
-### Push notification
+## Push notification
 
-To enable push notification you must go in gear icon (top left) > settings > allow push
+To enable push notification you must click in gear icon (top left) > settings > allow push
 
-### TODO
+## TODO list
 
-- Make this app installable using npm
-- I'm thinking...
+- [ ] Make this app installable using npm
+- [ ] Put a loading image
 
-### Disclaimer
+## Disclaimer
 
 This is NOT a official facebook app.
 
